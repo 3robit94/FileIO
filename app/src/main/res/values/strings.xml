@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">File IO</string>
+    <string name="saveFile">Save File</string>
+    <string name="loadFile">Load File</string>
 </resources>
