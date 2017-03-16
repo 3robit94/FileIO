@@ -51,9 +51,13 @@ public class MainActivity extends AppCompatActivity  {
                 EditText textmsg = (EditText)findViewById(R.id.editText);
                 FileReader fr = new FileReader(Environment.getExternalStorageDirectory().getAbsolutePath() + "/textedit.txt");
                 BufferedReader reader = new BufferedReader(fr);
-                String line = "";
+                String line = null;
+                String full = "";
                 while((line = reader.readLine()) != null){
-                    textmsg.setText(line);
+                    full += line + "\n";
+                }
+                if(full != ""){
+                    textmsg.setText(full);
                 }
                 reader.close();
             }
